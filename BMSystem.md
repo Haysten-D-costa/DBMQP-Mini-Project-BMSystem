@@ -6,7 +6,7 @@
 
 ###   Entities (Tables / Relations) : 
 - `Books`(ISBN(PK), Title, Author, Genere, Price, Quantity, Publisher, PublicationDate)`,
-- `Customers`(CustomerID(PK), Name, ContactInformation, Email, LoyaltyPoints),
+- `Customers`(CustomerID(PK), Name, ContactInformation, Email),
 - `Orders`(OrderID(PK), OrderDate, CustomerID(FK), TotalAmount),
 - `OrderItems`(OrderItemID(PK), OrderID(FK), ISBN(FK), Quantity, PriceAtPurchase),
 - `Suppliers`(SupplierID(PK), Name, ContactInformation, Address),
