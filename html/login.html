@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>BMSystem-LOGINPage</title>
+		<link rel="stylesheet" href="../css/login.css">
+	</head>
+	
+	<body>
+	<h1 align ="center">LOGIN SECTION</h1><br><br>
+	<img src="../images/lib.jpg" id="login-image" width="700" height="586" align ="right">
+		
+		<div class="form-container">
+			<form align="left" method="post" action="../php/login.php" style ="font-family:verdana;" autocomplete="off" height="50%">
+				<label for="fname" class="label"> FIRST NAME:</label><br>
+				<input class="input-boxes" size ="55" type="text" id="fname" placeholder="First name" name="fname"><br><br><br><br>
+				
+				<label for="lname" class="label"> LAST NAME:</label><br>
+				<input class="input-boxes" size ="55" type="text" id="lname" placeholder="Last name" name="lname"><br><br><br><br>
+				
+				<label for="email" class="label">EMAIL:</label><br>
+				<input class="input-boxes" size ="55" type="email" id="email" placeholder ="Email"name="email"><br><br><br><br>
+				
+				<label for="password" class="label">PASSWORD:</label><br>
+				<input class="input-boxes" size ="55" type="password" id="password" name="password" maxlength="10"><br><br><br>
+		
+				<input type="reset" value="RESET" class="button">
+				<input type="submit" value="LOGIN" class="button">	
+			</form>
+		</div>
+	</body>
+</html>

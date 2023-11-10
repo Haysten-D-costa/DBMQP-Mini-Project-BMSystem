@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    color: whitesmoke;
+    background-color:#212121;
+}
+h1 {
+    color: whitesmoke;
+    background-color: #c00;
+    font-family: verdana; 
+    padding: 18px;
+}
+.button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: whitesmoke;
+    background-color: #c00;
+    border: none;
+    font-weight: bolder;
+}
+.top-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-didplay-container {
+    color: whitesmoke;
+    background-color: #171717;
+}
+.label {
+    font-size: 25px;
+}
+.search-bar {
+    height: 40px;
+    width: 800px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: medium;
+    padding-left: 10px;
+}
+#search-label {
+    font-size: 30px;
+    font-family: verdana;
+}
+.display-table {
+    
+}
