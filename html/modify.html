@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Add-Update Books Form</title>
+		<link rel="stylesheet" href="../css/modify.css">
+	</head>
+	<body>
+	<h1 align ="center">MODIFY BOOK SECTION</h1><br><br>
+
+	<p class="imp-text" style="padding-left: 80px;">Atleast one field including Book ISBN is mandatory !  (All Fields REQUIRED DURING INSERTION)</p>
+	<br>
+	
+	<div class="form-container">
+		<form align="left" method="post" action="../php/modify.php" style ="font-family:verdana;" autocomplete="off" height="50%">
+			<label for="isbn" class="label"> Book ISBN<span class="imp-text"> * </span> : </label><br>
+			<input class="input-boxes" size ="50" type="text" id="isbn" placeholder="Eg : 9999988888777" name="isbn"><br><br>
+			
+			<label for="title" class="label"> Book Title<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="title" placeholder="Eg : Harry Potter " name="title"><br><br>
+			
+			<label for="author" class="label">Book Author :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="author" placeholder ="Eg : Haysten D'costa"name="author"><br><br>
+			
+			<label for="genre" class="label">Book Genre :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="genre" placeholder ="Eg : Adventure"name="genre"><br><br>
+
+			<label for="price" class="label"> Book Price<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="price" placeholder="Eg : 50" name="price"><br><br>
+
+			<label for="quantity" class="label"> Book Quantity :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="quantity" placeholder="Eg : 5" name="quantity"><br><br>
+
+			<label for="publisher" class="label"> Book Publisher :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="publisher" placeholder="Eg : Tim Baner Lee" name="publisher"><br><br>
+			
+			<label for="publication_date" class="label"> Book Publication Date :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="publication_date" placeholder="Format : YYYY-MM-DD" name="publication_date"><br><br>
+	
+			<div style="display: flex; justify-content: center; align-items: center;">
+				<input type="submit" name="button" value="INSERT" class="button">
+				<input type="submit" name="button" value="DELETE" class="button">
+			</div>
+			<br>
+			<a href="../php/books.php">See books</a>
+		</form>
+		<img src="../images/lib2.jpg" id="login-image" width="670px" height="700px">
+	</div>
+</body>
+</html>
