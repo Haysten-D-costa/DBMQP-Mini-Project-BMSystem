@@ -70,4 +70,12 @@
 ### Demo : 
 
 ![BMSystemDemo](/images/LoginPage.png)
-![BMSystemDemo](/images/BooksPage.png)
+<hr>
+
+![BMSystemDemo](/images/Books.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Books2.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Modify.jpeg)

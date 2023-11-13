@@ -92,26 +92,16 @@
 
                             if($r) {
                                 while($info = mysqli_fetch_array($r)) {
-                                    // if($view == "view1") {
-                                        echo "<tr>
-                                            <td>" . $info["ISBN"] ."</td>
-                                            <td>" . $info["Title"] . "</td>
-                                            <td>" . $info["Author"] . "</td>
-                                            <td>" . $info["Genre"] . "</td>
-                                            <td>" . $info["Price"] . "</td>
-                                            <td>" . $info["Quantity"] . "</td>
-                                            <td>" . $info["Publisher"] . "</td>
-                                            <td>" . $info["PublicationDate"] . "</td>
-                                            </tr>";
-                                    // } 
-                                    // else if($view == "view2") {
-                                    //     echo "<tr>
-                                    //         <td>" . $info["Title"] . "</td>
-                                    //         <td>" . $info["Author"] . "</td>
-                                    //         <td>" . $info["Genre"] . "</td>
-                                    //         <td>" . $info["Price"] . "</td>
-                                    //         </tr>";
-                                    // }
+                                    echo "<tr>
+                                        <td>" . $info["ISBN"] ."</td>
+                                        <td>" . $info["Title"] . "</td>
+                                        <td>" . $info["Author"] . "</td>
+                                        <td>" . $info["Genre"] . "</td>
+                                        <td>" . $info["Price"] . "</td>
+                                        <td>" . $info["Quantity"] . "</td>
+                                        <td>" . $info["Publisher"] . "</td>
+                                        <td>" . $info["PublicationDate"] . "</td>
+                                        </tr>";
                                 }
                             }
                             else {
