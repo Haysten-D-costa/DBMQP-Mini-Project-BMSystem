@@ -1,89 +1,90 @@
 
-		body, html {
-		  height: 100%;
-		}
 
-		* {
-		  box-sizing: border-box;
-		  padding: 0px;
-		  margin: 0px;
-		}
-        
-        .label {
-            font-size: 20px;
-            margin-top: 20px;
-        }
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	background-color: #212121;
+}
 
-        h1 {
-            background-color: #c00;
-            font-family: verdana; 
-            color: #ddd;
-            padding: 18px;
-            margin-bottom: 15px;
-        }
+.label {
+	font-size: 20px;
+	margin-top: 20px;
+}
 
-		.bg-img {
-		  /* The image used */
-		  background-image: url("../images/customer1.png");
+h1 {
+	background-color: #c00;
+	font-family: verdana; 
+	color: #ddd;
+	padding: 18px;
+	margin-bottom: 15px;
+}
 
-		  /* Control the height of the image */
-		  min-height: 720px;
+.bg-img {
+	/* The image used */
+	background-image: url("../images/customer1.png");
 
-		  /* Center and scale the image nicely */
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		  position: relative;
-		}
+	/* Control the height of the image */
+	min-height: 720px;
 
-		/* Add styles to the form container */
-		.container {
-		  position: absolute;
-          top: 100;
-		  right: 0;
-		  margin: 30px;
-          max-height: 500;
-		  max-width: 400px;
-		  padding: 16px;
-		  background-color: #eee9e9;
-		}
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
 
-		/* Full-width input fields */
-		  input[type=text], input[type=password] {
-		  width: 100%;
-		  padding: 15px;
-		  margin: 5px 0 22px 0;
-		  border: none;
-		  background: #f1f1f1;
-		}
+/* Add styles to the form container */
+.container {
+	position: absolute;
+	top: 100;
+	right: 0;
+	margin: 30px;
+	max-height: 500;
+	max-width: 400px;
+	padding: 16px;
+	color: whitesmoke;
+	background-color: #212121;
+}
 
-		input[type=text]:focus, input[type=password]:focus {
-		  background-color: #ddd;
-		  outline: none;
-		}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+}
 
-		/* Set a style for the submit button */
-		.button {
-            height: 50px;
-            width: 255px;
-            font-size: 20px;
-            font-weight: bolder;
-            margin-right: 10px;
-            background-color: #c00;
-            color: whitesmoke;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-		}
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
 
-		.btn:hover {
-		  opacity: 1;
-		}
+/* Set a style for the submit button */
+.button {
+	height: 50px;
+	width: 255px;
+	font-size: 20px;
+	font-weight: bolder;
+	margin-right: 10px;
+	background-color: #c00;
+	color: whitesmoke;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
 
-        .input-boxes {
-            height: 50px;
-            font-weight: bolder;
-            font-size: medium;
-        }
+.btn:hover {
+	opacity: 1;
+}
+
+.input-boxes {
+	height: 50px;
+	font-weight: bolder;
+	font-size: medium;
+}

@@ -16,7 +16,9 @@
         ('$name', '$email', '$password');
     ";
     $r = mysqli_query($conn, $query);
-    if($r) { echo "<br> Recored inserted successfully !"; }
+    if($r) { 
+        echo "<br> Recored inserted successfully !";
+    }
     else {
         echo "<br>Record insertion failed !";
         exit();

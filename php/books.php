@@ -30,7 +30,9 @@
         </style>
     </head>
     <body>
-        <h1 align="center">BOOKS SECTION</h1>
+        <header>
+            <h1 align="center">BOOK STORE MANAGEMENT SYSTEM</h1>
+        </header>
         <br><br>
         <form action="" method="POST">
             <div class="top-search-container">
