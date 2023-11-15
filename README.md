@@ -69,13 +69,24 @@
 
 ### Demo : 
 
-![BMSystemDemo](/images/LoginPage.png)
+![BMSystemDemo](/images/Pages/HomePage.png)
 <hr>
 
-![BMSystemDemo](/images/Books.jpeg)
+![BMSystemDemo](/images/Pages/LoginPage.png)
 <hr>
 
-![BMSystemDemo](/images/Books2.jpeg)
+![BMSystemDemo](/images/Pages/BooksPage.png)
 <hr>
 
-![BMSystemDemo](/images/Modify.jpeg)
+![BMSystemDemo](/images/Pages/Modify.jpeg)
+<br>
+
+![BMSystemDemo](/images/Pages/Books2.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/CustomerPage.png)
+<hr>
+
+![BMSystemDemo](/images/Pages/PaymentsPage.png)
+<hr>
+
