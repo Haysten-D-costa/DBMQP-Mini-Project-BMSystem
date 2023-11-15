@@ -117,6 +117,7 @@
         </div>
         <div align="center" class="operation-container">
             <a href="../html/modify.html" target="_self" style="width:300px">MODIFY</a>
+            <a href="../html/home.html" target="_self" style="width:300px">HOME</a>
         </div>
     </body>
 </html>
