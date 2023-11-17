@@ -1,3 +1,15 @@
+<html>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color: #707070;
+        }
+    </style>
+</html>
+
 <?php
    
     $conn = mysqli_connect("localhost", "root", "", "BMSystem");
