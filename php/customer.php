@@ -1,6 +1,6 @@
 /*
 <?php
-    // reading data from login page....
+    reading data from login page....
     $name = $_POST['name'] ;
     $continfo = $_POST['continfo'];
     $email = $_POST['email'];

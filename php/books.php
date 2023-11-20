@@ -2,6 +2,7 @@
     <head>
         <title>BMSystem-BOOKSPage</title>
         <link rel="stylesheet" href="../css/books.css">
+        <link rel="stylesheet" href="../css/header-footer.css">
         <style>
             table {
                 width: 90%;
@@ -116,8 +117,15 @@
             </table>
         </div>
         <div align="center" class="operation-container">
-            <a href="../html/modify.html" target="_self" style="width:300px">MODIFY</a>
-            <a href="../html/home.html" target="_self" style="width:300px">HOME</a>
+            <a href="../html/home.html" target="_self" style="width:300px">HOME</a><br>
+            <a href="../html/insert.html">INSERT</a>
+            <a href="../html/update.html">UPDATE</a>
+            <a href="../html/delete.html">DELETE</a>
         </div>
+        <footer>
+            <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
+            <p>All Rights Reserved !</p><br>
+            <p>Developers : Sehal | Riya | Siya | Haysten</p>
+        </footer>
     </body>
 </html>

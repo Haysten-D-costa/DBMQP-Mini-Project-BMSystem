@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Insert Books Form</title>
+		<link rel="stylesheet" href="../css/modify.css">
+		<link rel="stylesheet" href="../css/header-footer.css">
+		<style>
+			a {
+                text-decoration: none;
+                color: white;
+                background-color: #c00;
+                margin-left: 10px;
+                padding: 13px;
+                font-size: 20px;
+                font-weight: bolder;
+            }
+		</style>
+	</head>
+	<body>
+	<header>
+		<h1 align ="center">BOOK STORE MANAGEMENT SYSTEM</h1><br><br>
+	</header>
+
+	<p style="padding-left: 80px;">Atleast one field including Book ISBN is mandatory !  (All Fields REQUIRED DURING INSERTION)</p>
+	
+	<div class="form-container">
+		<form align="left" method="post" action="../php/modify.php" style ="font-family:verdana;" autocomplete="off" height="50%">
+			<label for="isbn" class="label"> Book ISBN<span class="imp-text"> * </span> : </label><br>
+			<input class="input-boxes" size ="50" type="number" id="isbn" placeholder="Eg : 9999988888777" name="isbn" required><br><br>
+			
+			<label for="title" class="label"> Book Title<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="title" placeholder="Eg : Harry Potter " name="title" required><br><br>
+			
+			<label for="author" class="label">Book Author<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="author" placeholder ="Eg : Haysten D'costa"name="author" required><br><br>
+			
+			<label for="genre" class="label">Book Genre<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="genre" placeholder ="Eg : Adventure"name="genre" required><br><br>
+
+			<label for="price" class="label"> Book Price<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="number" id="price" placeholder="Eg : 50" name="price" required><br><br>
+
+			<label for="quantity" class="label"> Book Quantity<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="number" id="quantity" placeholder="Eg : 5" name="quantity" required><br><br>
+
+			<label for="publisher" class="label"> Book Publisher<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="text" id="publisher" placeholder="Eg : Tim Baner Lee" name="publisher" required><br><br>
+			
+			<label for="publication_date" class="label"> Book Publication Date<span class="imp-text"> * </span> :</label><br>
+			<input class="input-boxes" size ="50" type="date" id="publication_date" placeholder="Format : YYYY-MM-DD" name="publication_date" required><br><br>
+	
+			<div style="display: flex; justify-content: center; align-items: center;">
+				<input type="submit" name="button" value="INSERT" class="button">
+				<a href="../php/books.php" class="links">Goto Books</a>
+				<a href="../html/home.html" class="links">Goto Home</a>
+			</div>
+			<br>
+		</form>
+		<img src="../images/reading.jpg" id="login-image" width="670px" height="700px" style="object-fit: contain;">
+	</div>
+	<footer>
+        <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
+        <p>All Rights Reserved !</p>
+        <p>Developers : Sehal|Riya|Siya|Haysten</p>
+    </footer>
+</body>
+</html>
