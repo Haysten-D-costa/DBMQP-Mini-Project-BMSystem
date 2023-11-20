@@ -1,0 +1,30 @@
+
+<html>
+	<head>
+		<title>Book Store Payment</title>
+		<link rel="stylesheet" href="../css/pay.css">
+	</head>
+	<body>
+		<header>
+			<h1>Payment Details</h1>
+		</header>
+
+		<script>
+			function addnewPayment() {
+				window.location.href = "pay.html";
+			}
+		</script>
+
+		<div class="form-container">
+		<form method="post" action="../html/payadd.html" onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%"><br>
+			<div style="display: flex; justify-content: center; align-items: center;">
+			<input type="submit" name="button" value="ADD NEW DETAILS" class="button">
+			
+			</div>
+
+			<br><br>
+			<a href="../html/home.html" class="links">HOME</a>
+		</form>
+		</div>
+	</body>
+</html>

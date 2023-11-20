@@ -32,16 +32,4 @@ h1 {
     margin-right: 5%;
     margin-top: 5%;
 }
-.label {
-    font-size: 20px;
-}
-.cname,
-.bname,
-.payt,
-.payi,
-.payd,
-.amt {
-    height: 30px;
-    font-weight: bolder;
-    font-size: medium;
-}
+

@@ -2,6 +2,8 @@
 
     // Retrieve form data
     // $paymentID = $_POST["paymentID"];
+    $custname = $_POST["custname"];
+    $bookname = $_POST["bookname"];
     $paymentDate = $_POST["paymentDate"];
 	$paymentType = $_POST["paymentType"];
     $amount = $_POST["amount"];
@@ -10,7 +12,9 @@
     echo "<h2>Payment Details</h2>";
     
     // echo "<br><br><b>Payment ID: </b>" .$paymentID;
-    echo "<br><br><b>Payment Date: </b>" .$paymentDate;
+    echo "<br><br><b>Customer Name: </b>" .$custname;
+    echo "<br><b>Book Name: </b>" .$bookname;
+    echo "<br><b>Payment Date: </b>" .$paymentDate;
     echo "<br><b>Payment Type: </b>" .$paymentType;
     echo "<br><b>Amount: </b>" .$amount;
 	
@@ -37,9 +41,9 @@
     }
 	
     $query = "
-        INSERT INTO Payments (PaymentDate, PaymentType, Amount)
+        INSERT INTO Payments (custname,bookname,PaymentDate, PaymentType, Amount)
         VALUES
-        ('$paymentDate', '$paymentType', '$amount');
+        ('$custname', '$bookname', '$paymentDate', '$paymentType', '$amount');
     ";
     $r = mysqli_query($conn, $query);
     if($r) { echo "<br> Payment Successfull !"; }
