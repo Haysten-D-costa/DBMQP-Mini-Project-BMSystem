@@ -3,9 +3,9 @@ CREATE DATABASE BMSystem;
 CREATE TABLE LoginDetails 
 (
     userID INT AUTO_INCREMENT PRIMARY KEY,
-
     userName VARCHAR(20),
     email VARCHAR(50),
+    phone VARCHAR(50),
     password VARCHAR(20) NOT NULL
 );
 
@@ -30,18 +30,18 @@ CREATE TABLE Customers
 );
 
 
-INSERT INTO LoginDetails (userName, email, password)
+INSERT INTO LoginDetails (userName, email, phone, password)
 VALUES
-("John Smith", "js@gmail.com", "12345"),
-("Jane Doe", "jd@gmail.com", "12345"),
-("David Johnson", "dj@gmail.com", "12345"),
-("Emily Williams", "ew@gmail.com", "12345"),
-("Michael Brown", "mb@gmail.com", "12345"),
-("Emma Davis", "ed@gmail.com", "12345"),
-("Christopher White", "cw@gmail.com", "12345"),
-("Olivia Wilson", "ow@gmail.com", "12345"),
-("Liam Martinez", "lm@gmail.com", "12345"),
-("Sophia Anderson", "sa@gmail.com", "12345");
+("John Smith", "js@gmail.com", "9999988888", "12345"),
+("Jane Doe", "jd@gmail.com", "9999988888", "12345"),
+("David Johnson", "dj@gmail.com", "9999988888", "12345"),
+("Emily Williams", "ew@gmail.com", "9999988888", "12345"),
+("Michael Brown", "mb@gmail.com", "9999988888", "12345"),
+("Emma Davis", "ed@gmail.com", "9999988888", "12345"),
+("Christopher White", "cw@gmail.com", "9999988888", "12345"),
+("Olivia Wilson", "ow@gmail.com", "9999988888", "12345"),
+("Liam Martinez", "lm@gmail.com", "9999988888", "12345"),
+("Sophia Anderson", "sa@gmail.com", "9999988888", "12345");
 
 
 INSERT INTO Books (ISBN, Title, Author, Genre, Price, Quantity, Publisher, PublicationDate)
@@ -91,4 +91,12 @@ VALUES
 (9, "2023-10-23", "Credit Card", 22.75),
 (10, "2023-10-24", "Credit Card", 33.50);
 
-CREATE VIEW 
+
+-- creation of views for display of book data....
+CREATE VIEW view1 AS
+SELECT ISBN, Title, Author, Genre, Price, Quantity, Publisher, PublicationDate
+FROM Books;
+
+CREATE VIEW View2 AS
+SELECT ISBN, Author, Title, Genre
+FROM Books;

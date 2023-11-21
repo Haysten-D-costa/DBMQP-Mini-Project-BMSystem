@@ -39,7 +39,7 @@
             <div class="top-search-container">
                 <div>
                     <!-- <label for="search-bar" id="search-label">SEARCH : </label> -->
-                    <input type="text" id="search-bar" name="search-bar" placeholder="Search book name here" class="search-bar">
+                    <input type="text" id="search-bar" name="search-bar" placeholder="Search" class="search-bar">
                 </div>
                 <input type="submit" value="SEARCH" id="search-button" name="search-button" class="button">
                 

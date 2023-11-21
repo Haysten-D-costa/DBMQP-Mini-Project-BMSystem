@@ -9,14 +9,14 @@
         exit();
     }
     $isbn = $_POST['isbn'];
-    $title = ($_POST['title'] != "") ? $_POST['title'] : "Title";
-    $author = ($_POST['author'] != "") ? $_POST['author'] : "Author";
-    $genre = ($_POST['genre'] != "") ? $_POST['genre'] : "Genre";
-    $price = ($_POST['price'] != "") ? $_POST['price'] : "Price";
-    $quantity = ($_POST['quantity'] != "") ? $_POST['quantity'] : "Quantity";
-    $publisher = ($_POST['publisher'] != "") ? $_POST['publisher'] : "Publisher";
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $genre = $_POST['genre'];
+    $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
+    $publisher = $_POST['publisher'];
+    $publication_date = $_POST['publication_date'];
     
-    $publication_date = ($_POST['publication_date'] != "") ? $_POST['publication_date'] : "PublicationDate";
     if (isset($_POST['button'])) {  // on click of any button....
         $action = $_POST['button']; // store the operation(value) of the button -i.e- insert / delete.... 
 
