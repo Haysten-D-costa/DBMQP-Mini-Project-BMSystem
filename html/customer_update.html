@@ -1,7 +1,7 @@
 <html>
 	<head>
         <title>Update Details</title>
-		<link rel="stylesheet" href="../css/customer.css">
+		<link rel="stylesheet" href="../css/books.css">
 		<link rel="stylesheet" href="../css/header-footer.css">
 	</head>
 	<body>
@@ -11,19 +11,28 @@
 		<div class="form-container">
 		<form align="left" method="post" action="../php/customer_update.php" onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%">
 
-			<label for="name" class="label"> NAME:</label><br>
-			<input class="input-boxes" size ="55" type="text" id="name" placeholder="name" name="name" required><br><br><br><br>
+			<label for="userid" class="label" > USER ID:</label><br>
+			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="text" id="userid" placeholder="" name="userid" required><br><br><br><br>
+
+			<label for="name" class="label" > NAME:</label><br>
+			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="text" id="name" placeholder="name" name="name" required><br><br><br><br>
 
 			<label for="email" class="label">EMAIL:</label><br>
-			<input class="input-boxes" size ="55" type="email" id="email" placeholder ="Email"name="email" required><br><br><br><br>
+			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="email" id="email" placeholder ="Email"name="email" required><br><br><br><br>
+
+			<label for="phone" class="label">CONTACT NUMBER:</label><br>
+			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="phone" id="phone" placeholder ="contact"name="phone" required><br><br><br><br>
 
 			<label for="password" class="label">PASSWORD:</label><br>
-			<input class="input-boxes" size ="55" type="password" id="password" name="password" maxlength="10" required><br><br><br>
+			<input class="input-boxes" size ="55"  Style="width: 250px; height: 40px" type="password" id="password" name="password" maxlength="10" required><br><br><br>
 
 			<input type="submit" value="UPDATE" class="button">
 		</form>
 		<br>
-		<a href="../html/home.html" class="links">HOME</a>
+	
+		<a href="../html/home.html" class="links"> <button type="button"  value="HOME" class="button">HOME</button></a>
+		<a href="../html/customer.html" class="links"><button type="button"  value="CUSTOMER SERVICE" class="button">CUSTOMER SERVICE</button></a>
+		
 		</div>
         <footer>
 			<h3>&copy; 2023 Book-Store-Management-System LLC.</h3>

@@ -1,9 +1,11 @@
 
 <?php
 
+    $userid=$_POST['userid'];
     $name = $_POST['name'] ;
     $email = $_POST['email'];
-    $password = $_POST['password'];;
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
 
     $conn = mysqli_connect("localhost", "root", "", "BMSystem");
     if($conn) { }
@@ -16,7 +18,9 @@
         SET  
             userName= '$name' and
 		    email= '$email' and
-			password= '$password';
+			password= '$password' and
+            phone= '$phone' 
+        WHERE userID='$userid';
         ";
     $r = mysqli_query($conn, $query);
     if($r) { echo "Update Successful !"; }
