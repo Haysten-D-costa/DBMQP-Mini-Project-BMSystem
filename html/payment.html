@@ -5,28 +5,26 @@
     <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-    <h1>Payment Details</h1><br><br>
-
-    <script>
-		function dopayment() {
-			window.location.href = "payment.html";
-		}
-	</script>
-
-    <div class="form-container">
-        
+    <header>
+        <h1>Payment Details</h1>
+    </header>
 
 
+        <div class="form-container">
+            <form method="post" action="../html/payadd.html" onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%"><br>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                <a href=""><button type="submit" name="button" value="ADDNEWDETAILS" class="button">ADD NEW DETAILS</button> <br><br></a>
+	            <a href=""><button type="button" value="" class="button" onclick=""></button> <br><br></a>
+                </div>
+    
+                <br>
+                
+                <a href="../html/home.html">HOME</a>
+            </form>
+            
 
 
-        <form method="post" action="../html/payadd.html" onsubmit="dopayment()" style="font-family: verdana;" autocomplete="off">
-            <a href="../html/payadd.html"><button type="submit" value="Pay" class="button">ADD PAYMENT</button></a>
-            <button type="" value="" class="button"></button>
-        </form>
-
-        <br>
-	    <a href="../html/home.html"><button class="button">HOME</button></a>
-    </div>
+        </div>
     <footer>
         <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
         <p>All Rights Reserved !</p>
