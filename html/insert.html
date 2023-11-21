@@ -3,17 +3,6 @@
 		<title>Insert Books Form</title>
 		<link rel="stylesheet" href="../css/modify.css">
 		<link rel="stylesheet" href="../css/header-footer.css">
-		<style>
-			a {
-                text-decoration: none;
-                color: white;
-                background-color: #c00;
-                margin-left: 10px;
-                padding: 13px;
-                font-size: 20px;
-                font-weight: bolder;
-            }
-		</style>
 	</head>
 	<body>
 	<header>
@@ -23,7 +12,7 @@
 	<p style="padding-left: 80px;">Atleast one field including Book ISBN is mandatory !  (All Fields REQUIRED DURING INSERTION)</p>
 	
 	<div class="form-container">
-		<form align="left" method="post" action="../php/modify.php" style ="font-family:verdana;" autocomplete="off" height="50%">
+		<form align="left" method="post" action="../php/insert.php" style ="font-family:verdana;" autocomplete="off" height="50%">
 			<label for="isbn" class="label"> Book ISBN<span class="imp-text"> * </span> : </label><br>
 			<input class="input-boxes" size ="50" type="number" id="isbn" placeholder="Eg : 9999988888777" name="isbn" required><br><br>
 			

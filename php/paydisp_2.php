@@ -18,32 +18,30 @@
 </head>
 <body>
     <br><br>
-    <a href="../php/books.php" class="links">Goto Books</a>
+    <a href="../html/payment.html" class="links">Goto Payments</a>
     <a href="../html/home.html" class="links">Goto Home</a>
     <br><br>
 </body>
 <html>
 
 <?php
-    $isbn = $_POST['isbn'];
-
     $conn = mysqli_connect("localhost", "root", "", "BMSystem");
     if($conn) { }
     else {
-        echo "Connection Failed !";
+        echo "Failed connection !";
         exit();
     }
-    if (isset($_POST['button'])) {  // on click of any button....
-        
-        $query = "
-            DELETE FROM Books 
-            WHERE ISBN = '$isbn';
-        ";
-        $r = mysqli_query($conn, $query);
-        if($r) { echo "Entry with ISBN $isbn deletion successful !"; }
-        else {
-            echo "Deletion Failed !";
-            exit();
+    $query = "
+    SELECT userID, userName FROM LoginDetails
+    INTERSECT 
+    SELECT PaymentID, PaymentName FROM Payments;
+    ";
+    $r = mysqli_query($conn, $query);
+
+    if($r) {
+        while($info = mysqli_fetch_array($r)) {
+            echo "<br><br>Customer ID : " . $info['userID'];
+            echo "<br>Customer Name   : " . $info['userName'];               
         }
     }
 ?>

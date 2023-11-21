@@ -21,14 +21,6 @@ CREATE TABLE Books
     PublicationDate DATE
 );
 
-CREATE TABLE Customers
-(
-    CustomerID INT REFERENCES LoginDetails(userID),
-    Name VARCHAR(255) REFERENCES LoginDetails(userName),
-    ContactInformation VARCHAR(255),
-    Email VARCHAR(255)
-);
-
 
 INSERT INTO LoginDetails (userName, email, phone, password)
 VALUES
@@ -57,22 +49,9 @@ VALUES
 ("9780385333849", "The Kite Runner", "Khaled Hosseini", "Historical Fiction", 13.50, 20, "Riverhead", "2004-05-29"),
 ("9780062362501", "The Girl on the Train", "Paula Hawkins", "Thriller", 12.25, 38, "Riverhead", "2015-01-13");
 
-INSERT INTO Customers (CustomerID, Name, ContactInformation, Email)
-VALUES
-(1, "John Smith", "123 Main St, Anytown, USA", "js@email.com"),
-(2, "Jane Doe", "456 Elm St, Othertown, USA", "jd@email.com"),
-(3, "David Johnson", "789 Oak St, Another Town, USA", "dj@email.com"),
-(4, "Emily Williams", "101 Pine St, Somewhere, USA", "ew@email.com"),
-(5, "Michael Brown", "202 Oak Ave, Anytown, USA", "mb@email.com"),
-(6, "Emma Davis", "303 Maple St, Othertown, USA", "ed@email.com"),
-(7, "Christopher White", "404 Birch St, Another Town, USA", "cw@email.com"),
-(8, "Olivia Wilson", "505 Cedar St, Somewhere, USA", "ow@email.com"),
-(9, "Liam Martinez", "606 Pine St, Anywhere, USA", "lm@email.com"),
-(10, "Sophia Anderson", "707 Cedar St, Elsewhere, USA", "sa@email.com");
-
 CREATE TABLE Payments
 (
-    PaymentID INT REFERENCES LoginDetails(userID),
+    PaymentID INT AUTO_INCREMENT PRIMARY KEY,
     PaymentName VARCHAR(50) NOT NULL,
     BookName VARCHAR(50),
     PaymentDate DATE,
@@ -80,19 +59,18 @@ CREATE TABLE Payments
     Amount FLOAT
 ); 
 
-INSERT INTO Payments (PaymentID, PaymentDate, PaymentType, Amount)
+INSERT INTO Payments (PaymentName, BookName, PaymentDate, PaymentType, Amount)
 VALUES
-(1, "2023-10-15", "Credit Card", 54.95),
-(2, "2023-10-16", "PayPal", 42.97),
-(3, "2023-10-17", "Debit Card", 36.75),
-(4, "2023-10-18", "Cash", 23.99),
-(5, "2023-10-19", "Credit Card", 67.50),
-(6, "2023-10-20", "PayPal", 29.85),
-(7, "2023-10-21", "Debit Card", 45.20),
-(8, "2023-10-22", "Cash", 18.99),
-(9, "2023-10-23", "Credit Card", 22.75),
-(10, "2023-10-24", "Credit Card", 33.50);
-
+("John Smith", "To Kill a Mockingbird", "2023-10-15", "Credit Card", 54.95),
+("Jane Doe", "1984", "2023-10-16", "PayPal", 42.97),
+("David Johnson", "The Great Gatsby", "2023-10-17", "Debit Card", 36.75),
+("Emily Williams", "The Catcher in the Rye", "2023-10-18", "Cash", 23.99),
+("Michael Brown", "Dune", "2023-10-19", "Credit Card", 67.50),
+("Emma Davis", "The Hobbit", "2023-10-20", "PayPal", 29.85),
+("Christopher White", "The Fault in Our Stars", "2023-10-21", "Debit Card", 45.20),
+("Olivia Wilson", "The Da Vinci Code", "2023-10-22", "Cash", 18.99),
+("Liam Martinez", "The Kite Runner", "2023-10-23", "Credit Card", 22.75),
+("Sophia Anderson", "The Girl on the Train",  "2023-10-24", "Credit Card", 33.50);
 
 -- creation of views for display of book data....
 CREATE VIEW view1 AS
@@ -102,3 +80,15 @@ FROM Books;
 CREATE VIEW View2 AS
 SELECT ISBN, Title, Author, Genre
 FROM Books;
+
+-- joins implemented...
+SELECT l.userID, l.paymentName, b.ISBN, b.title,
+b.author, b.genre, b.price, p.paymentType, p.amount
+FROM LoginDetails as l, Books as b, Payments as p
+WHERE
+    l.userName = p.PaymentName AND
+    b.title = p.bookname;
+
+SELECT userID, userName FROM LoginDetails
+INTERSECT 
+SELECT PaymentID, PaymentName FROM Payments;

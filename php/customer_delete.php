@@ -5,13 +5,11 @@
 <body>
     <div class="container">
         <div>
-        
-		<form align="left" method="post" action=""  onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%">
-
-			<label for="userid" class="label"> USER ID:</label><br>
-			<input class="input-boxes" size ="55" type="text" id="userId" placeholder="" name="userId" required><br><br><br><br>
-			<input type="submit" value="DELETE" class="button">
-		</form>
+            <form align="left" method="post" action=""  onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%">
+                <label for="userid" class="label"> USER ID:</label><br>
+                <input class="input-boxes" size ="55" type="text" id="userId" placeholder="" name="userId" required><br><br><br><br>
+                <input type="submit" value="DELETE" class="button">
+            </form>
         </div>
         <div>
                 <?php

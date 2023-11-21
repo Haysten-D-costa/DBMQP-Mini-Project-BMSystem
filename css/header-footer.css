@@ -3,10 +3,19 @@ header, footer {
 }
 footer {
     padding: 10px;
-    position: sticky;
-    bottom: 0;
+    position: fixed;
+    bottom:0;
+    width: 100%;
     margin-top: 100px;
     color: whitesmoke;
     background-color: #c00;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.links {
+    text-decoration: none;
+    color: white;
+    background-color: #c00;
+    padding: 13px;
+    font-size: 20px;
+    font-weight: bolder;
 }

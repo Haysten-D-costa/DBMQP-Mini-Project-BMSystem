@@ -28,6 +28,11 @@
                 font-size: 20px;
                 font-weight: bolder;
             }
+            footer {
+                position: fixed;
+                bottom:0;
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -71,7 +76,6 @@
                             echo "Failed connection !";
                             exit();
                         }
-
                         if(isset($_POST['views'])) {
                             $view_by = $_POST['views'];
                             if($view_by == "view1") {
@@ -93,11 +97,8 @@
                                     <th>Book Genre</th>
                                     </tr>";
                             }
-
-                        }
-                        
+                        }  
                     ?>
-                    
                 </thead>
                 <tbody>
                     <?php
@@ -152,14 +153,15 @@
             </table>
         </div>
         <div align="center" class="operation-container">
-            <a href="../html/home.html" target="_self" style="width:300px">HOME</a><br>
+            <a href="../html/home.html" target="_self" style="width:300px">HOME</a>
             <a href="../html/insert.html">INSERT</a>
             <a href="../html/update.html">UPDATE</a>
             <a href="../html/delete.html">DELETE</a>
+            <br><br><br><br><br><br><br><br>
         </div>
         <footer>
             <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
-            <p>All Rights Reserved !</p><br>
+            <p>All Rights Reserved !</p>
             <p>Developers : Sehal | Riya | Siya | Haysten</p>
         </footer>
     </body>
