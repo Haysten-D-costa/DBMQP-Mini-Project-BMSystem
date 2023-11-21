@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>CUSTOMER REGISTER</title>
+		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="../css/header-footer.css">
+	</head>
+	<body>
+		<header>
+			<h1 align ="center">BOOK STORE MANAGEMENT SYSTEM</h1><br><br>
+		</header>
+		<div class="form-container">
+		<form align="left" method="post" action="../php/customer_add.php" onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%">
+
+			<label for="name" class="label"> NAME:</label><br>
+			<input class="input-boxes" size ="55" type="text" id="name" placeholder="name" name="name" required><br><br><br><br>
+
+			<label for="email" class="label">EMAIL:</label><br>
+			<input class="input-boxes" size ="55" type="email" id="email" placeholder ="Email"name="email" required><br><br><br><br>
+
+			<label for="password" class="label">PASSWORD:</label><br>
+			<input class="input-boxes" size ="55" type="password" id="password" name="password" maxlength="10" required><br><br><br>
+
+			<input type="reset" value="RESET" class="button">
+			<input type="submit" value="REGISTER" class="button">
+		</form>
+		<br>
+		<a href="../html/home.html" class="links">HOME</a>
+		</div>
+		<footer>
+			<h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
+			<p>All Rights Reserved !</p>
+			<p>Developers : Sehal|Riya|Siya|Haysten</p>
+		</footer>
+	</body>
+</html>

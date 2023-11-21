@@ -1,36 +1,39 @@
-<html>
-<head>
-	<title>Customer Registration</title>
-	<link rel="stylesheet" href="../css/customer.css">
-	<link rel="stylesheet" href="../css/header-footer.css">
-</head>
-<body>
-	<header>
-		<h1 align="center">BOOK STORE MANAGEMENT SYSTEM</h1>
-	</header>
-	<div class="bg-img">
-	  <form action="customer.php" class="container">
-		<h1>REGISTRATION</h1>
-		
-		<label for="name" class="label"><b>Name</b></label>
-		<input class="input-boxes" type="text" placeholder="Enter Name" name="name" required>
-		
-		<label for="email" class="label"><b>Email</b></label>
-		<input  class="input-boxes" type="text" placeholder="Enter Email" name="email" required>
 
-		<label for="continfo" class="label"><b>Contact Information</b></label>
-		<input class="input-boxes" type="text" placeholder="Enter Contact Information" name="continfo" required>
-		
-		<a href="../php/customer_display.php">
-			<button type="submit" class="button" value="Register">REGISTER</button>	
-		</a>
+<html>
+	<head>
+		<title>Customer Services</title>
+		<link rel="stylesheet" href="../css/customer.css">
+		<link rel="stylesheet" href="../css/header-footer.css">
+	</head>
+	<body>
+		<header>
+			<h1 align="center">BOOK STORE MANAGEMENT SYSTEM</h1>
+		</header>
+		<div >
+		<form>
+			<h1 >CUSTOMER SERVICE</h1>
+			<div style="display: flex; justify-content: center; align-items: center;">
+				<a href="../html/customer_add.html" target="_blank" class="button">ADD
+				
+				</a>
+				<a href="../html/customer_update.html" target="_blank" class="button">
+					<button type="button">UPDATE</button>
+				</a>
+				<a href="../php/customer_delete.php" target="_blank" class="button">
+					<button type="button">DELETE</button>
+				</a>
+				<a href="../php/customer_display.php" target="_blank" class="button">
+					<button type="button">DISPLAY</button>
+				</a>
+			
+			</div>
 		</form>
-		<a class="container" href="../html/home.html">HOME</a>
-	</div>
-	<footer>
-        <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
-        <p>All Rights Reserved !</p>
-        <p>Developers : Sehal|Riya|Siya|Haysten</p>
-    </footer>
-</body>
+		<a href="../html/home.html" class="links">Goto Home</a>
+		</div>
+		<footer>
+			<h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
+			<p>All Rights Reserved !</p>
+			<p>Developers : Sehal|Riya|Siya|Haysten</p>
+		</footer>
+	</body>
 </html>

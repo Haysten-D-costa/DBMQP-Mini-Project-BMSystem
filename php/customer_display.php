@@ -7,17 +7,16 @@
         alert("<br>Connection failed !");
         exit();
     }
-    $query = "SELECT * FROM Customers";
-    $r = mysqli_query($conn, $query);
-    if($r) 
+    $query = "SELECT * FROM LoginDetails";
+    $r1 = mysqli_query($conn, $query);
+    if($r1) 
     {
         $n = mysqli_num_rows($r1);
         if($n>0){
             while($info=mysqli_fetch_array($r1)){
-                echo "<br><br>ID  : ".$info['CustomerID'];
-                echo "<br>NAME  : ".$info['name'];
-                echo "<br>CONTACT INFORMATION  : ".$info['ContactInformation'];
-                echo "<br>EMAIL  : ".$info['Email'];
+                echo "<br><br>ID  : ".$info['userID'];
+                echo "<br>NAME  : ".$info['userName'];
+                echo "<br>EMAIL  : ".$info['email'];
             }
         }
         else
