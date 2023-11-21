@@ -1,39 +1,78 @@
 <html>
-	<head>
-		<title>CUSTOMER REGISTER</title>
-		<link rel="stylesheet" href="../css/books.css">
-		<link rel="stylesheet" href="../css/header-footer.css">
-	</head>
-	<body>
-		<header>
-			<h1 align ="center">BOOK STORE MANAGEMENT SYSTEM</h1><br><br>
-		</header>
-		<div class="form-container">
-		<form align="left" method="post" action="../php/customer_add.php" onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%">
+<head>
+    <title>CUSTOMER REGISTER</title>
+    <link rel="stylesheet" href="../css/books.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <style>
+    
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-			<label for="name" class="label"> NAME:</label><br>
-			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="text" id="name" placeholder="name" name="name" required><br><br><br><br>
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-			<label for="email" class="label">EMAIL:</label><br>
-			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="email" id="email" placeholder ="Email"name="email" required><br><br><br><br>
+        .label, .input-boxes {
+            margin-bottom: 10px;
+        }
 
-			<label for="phone" class="label">CONTACT NUMBER:</label><br>
-			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="phone" id="phone" placeholder ="contact"name="phone" required><br><br><br><br>
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
 
-			<label for="password" class="label">PASSWORD:</label><br>
-			<input class="input-boxes" size ="55" Style="width: 250px; height: 40px" type="password" id="password" name="password" maxlength="10" required><br><br><br>
+        .button {
+            width: 90%; 
+            margin-top: 10px;
+        }
 
-			<input type="reset" value="RESET" class="button">
-			<input type="submit" value="REGISTER" class="button">
-		</form>
-		<br>
-		<a href="../html/home.html" class="links"> <button type="button"  value="HOME" class="button">HOME</button></a>
-		<a href="../html/customer.html" class="links"><button type="button"  value="CUSTOMER SERVICE" class="button">CUSTOMER SERVICE</button></a>
-		</div>
-		<footer>
-			<h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
-			<p>All Rights Reserved !</p>
-			<p>Developers : Sehal|Riya|Siya|Haysten</p>
-		</footer>
-	</body>
+        .links {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">BOOK STORE MANAGEMENT SYSTEM</h1><br><br>
+    </header>
+
+    <div class="form-container">
+        <form method="post" action="../php/customer_add.php" onsubmit="redirectToHome()" style="font-family:verdana;" autocomplete="off" height="50%">
+
+            <label for="name" class="label"> NAME:</label>
+            <input class="input-boxes" style="width: 250px; height: 40px" type="text" id="name" placeholder="Enter name" name="name" required>
+
+            <label for="email" class="label">EMAIL:</label>
+            <input class="input-boxes" style="width: 250px; height: 40px" type="email" id="email" placeholder="Enter Email" name="email" required>
+
+            <label for="phone" class="label">CONTACT NUMBER:</label>
+            <input class="input-boxes" style="width: 250px; height: 40px" type="tel" id="phone" placeholder="Enter contact" name="phone" required>
+
+            <label for="password" class="label">PASSWORD:</label>
+            <input class="input-boxes" style="width: 250px; height: 40px" type="password" id="password" placeholder="Enter password" name="password" maxlength="10" required>
+
+            <div class="button-container">
+                <input type="reset" value="RESET" class="button">
+                <input type="submit" value="REGISTER" class="button">
+            </div>
+        </form>
+
+        <br>
+
+        <a href="../html/home.html" ><button type="button" value="HOME" class="button">HOME</button></a>
+        <a href="../html/customer.html" ><button type="button" value="CUSTOMER SERVICE" class="button">CUSTOMER SERVICE</button></a>
+    </div>
+
+    <footer>
+        <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
+        <p>All Rights Reserved !</p>
+        <p>Developers : Sehal|Riya|Siya|Haysten</p>
+    </footer>
+</body>
 </html>
