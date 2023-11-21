@@ -1,3 +1,14 @@
+<html>
+<head>
+    <style>
+        body {
+            color: whitesmoke;
+	        background-color: #212121;
+        }
+    </style>
+</head>
+<html>
+
 <?php
     if (isset($_POST['button'])) {  // on click of any button....
         $action = $_POST['button']; // store the operation(value) of the button -i.e- insert / delete.... 

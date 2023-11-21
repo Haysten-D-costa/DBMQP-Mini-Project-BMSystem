@@ -1,3 +1,14 @@
+<html>
+<head>
+    <style>
+        body {
+            color: whitesmoke;
+	        background-color: #212121;
+        }
+    </style>
+</head>
+<html>
+
 <?php
 
     $isbn = $_POST['isbn'];

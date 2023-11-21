@@ -73,6 +73,8 @@ VALUES
 CREATE TABLE Payments
 (
     PaymentID INT REFERENCES LoginDetails(userID),
+    PaymentName VARCHAR(50) NOT NULL,
+    BookName VARCHAR(50),
     PaymentDate DATE,
     PaymentType VARCHAR(50),
     Amount FLOAT
@@ -98,5 +100,5 @@ SELECT ISBN, Title, Author, Genre, Price, Quantity, Publisher, PublicationDate
 FROM Books;
 
 CREATE VIEW View2 AS
-SELECT ISBN, Author, Title, Genre
+SELECT ISBN, Title, Author, Genre
 FROM Books;
