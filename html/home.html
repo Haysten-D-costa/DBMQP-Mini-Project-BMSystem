@@ -2,14 +2,18 @@
 <head>
     <title>HTML WebPractice</title>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
     <style>
-        header, footer {
-            text-align: center;
+        
+        .home-quotes-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            padding-top: 50px;
         }
-        footer {
-            margin-top: 500px;
-            background-color: #c00;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        .home-quotes {
+            border-radius: 100px;
         }
     </style>
 </head>
@@ -23,14 +27,13 @@
         <a href="../html/customer.html" class="nav-bar-content" id="customer"><p>CUSTOMER SERVICES</p></a>
         <a href="../html/payment.html" class="nav-bar-content" id="payments"><p>PAYMENTS</p></a>
     </nav>
-    <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="home-quotes-container">
+        <img src="../images/quote1.jpg" class="home-quotes" alt="quotes" width="350px" height="350px">
+        <img src="../images/quote2.jpg" class="home-quotes" alt="quotes" width="350px" height="350px">
+        <img src="../images/quote3.jpg" class="home-quotes" alt="quotes" width="350px" height="350px">
+        <img src="../images/quote4.jpg" class="home-quotes" alt="quotes" width="350px" height="350px">
     </div>
-    <footer style="background-color: #171717;">
+    <footer>
         <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
         <p>All Rights Reserved !</p>
         <p>Developers : Sehal|Riya|Siya|Haysten</p>

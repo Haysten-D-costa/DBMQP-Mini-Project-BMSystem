@@ -1,0 +1,15 @@
+header, footer {
+    text-align: center;
+}
+footer {
+    padding: 10px;
+    position: sticky;
+    bottom: 0px;
+    margin-top: 100px;
+    color: whitesmoke;
+    background-color: #c00;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+    
+}
