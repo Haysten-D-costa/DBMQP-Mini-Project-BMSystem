@@ -39,7 +39,7 @@
             <div class="top-search-container">
                 <div>
                     <!-- <label for="search-bar" id="search-label">SEARCH : </label> -->
-                    <input type="text" id="search-bar" name="search-bar" placeholder="Search book name here" class="search-bar">
+                    <input type="text" id="search-bar" name="search-bar" placeholder="Search" class="search-bar">
                 </div>
                 <input type="submit" value="SEARCH" id="search-button" name="search-button" class="button">
                 
@@ -64,16 +64,40 @@
             <br><br>
             <table class="table-content">
                 <thead>
-                    <tr>
-                        <th>Book ISBN</th>
-                        <th>Book Title</th>
-                        <th>Book Author</th>
-                        <th>Book Genre</th>
-                        <th>Book Price</th>
-                        <th>Book Quantity</th>
-                        <th>Book Publisher</th>
-                        <th>Book Publication Date</th>
-                    </tr>
+                    <?php
+                        $conn = mysqli_connect("localhost", "root", "", "BMSystem");
+                        if($conn) { }
+                        else {
+                            echo "Failed connection !";
+                            exit();
+                        }
+
+                        if(isset($_POST['views'])) {
+                            $view_by = $_POST['views'];
+                            if($view_by == "view1") {
+                                echo "<tr>
+                                    <th>Book ISBN</th>
+                                    <th>Book Title</th>
+                                    <th>Book Author</th>
+                                    <th>Book Genre</th>
+                                    <th>Book Price</th>
+                                    <th>Book Quantity</th>
+                                    <th>Book Publisher</th>
+                                    <th>Book Publication Date</th>
+                                    </tr>";
+                            } else {
+                                echo "<tr>
+                                    <th>Book ISBN</th>
+                                    <th>Book Title</th>
+                                    <th>Book Author</th>
+                                    <th>Book Genre</th>
+                                    </tr>";
+                            }
+
+                        }
+                        
+                    ?>
+                    
                 </thead>
                 <tbody>
                     <?php
@@ -94,17 +118,28 @@
                             $r = mysqli_query($conn, $query);
 
                             if($r) {
-                                while($info = mysqli_fetch_array($r)) {
-                                    echo "<tr>
-                                        <td>" . $info["ISBN"] ."</td>
-                                        <td>" . $info["Title"] . "</td>
-                                        <td>" . $info["Author"] . "</td>
-                                        <td>" . $info["Genre"] . "</td>
-                                        <td>" . $info["Price"] . "</td>
-                                        <td>" . $info["Quantity"] . "</td>
-                                        <td>" . $info["Publisher"] . "</td>
-                                        <td>" . $info["PublicationDate"] . "</td>
-                                        </tr>";
+                                if($view_by == "view1") {
+                                    while($info = mysqli_fetch_array($r)) {
+                                        echo "<tr>
+                                            <td>" . $info["ISBN"] ."</td>
+                                            <td>" . $info["Title"] . "</td>
+                                            <td>" . $info["Author"] . "</td>
+                                            <td>" . $info["Genre"] . "</td>
+                                            <td>" . $info["Price"] . "</td>
+                                            <td>" . $info["Quantity"] . "</td>
+                                            <td>" . $info["Publisher"] . "</td>
+                                            <td>" . $info["PublicationDate"] . "</td>
+                                            </tr>";
+                                    }
+                                } else {
+                                    while($info = mysqli_fetch_array($r)) {
+                                        echo "<tr>
+                                            <td>" . $info["ISBN"] ."</td>
+                                            <td>" . $info["Title"] . "</td>
+                                            <td>" . $info["Author"] . "</td>
+                                            <td>" . $info["Genre"] . "</td>
+                                            </tr>";
+                                        }
                                 }
                             }
                             else {

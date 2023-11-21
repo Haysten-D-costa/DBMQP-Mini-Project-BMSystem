@@ -1,3 +1,14 @@
+<html>
+<head>
+    <style>
+        body {
+            color: whitesmoke;
+	        background-color: #212121;
+        }
+    </style>
+</head>
+<html>
+
 <?php
     // reading data from login page....
     $name = $_POST['fname'] ." ". $_POST['lname'];

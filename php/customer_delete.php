@@ -10,9 +10,6 @@
 
 			<label for="userid" class="label"> USER ID:</label><br>
 			<input class="input-boxes" size ="55" type="text" id="userId" placeholder="" name="userId" required><br><br><br><br>
-
-		
-
 			<input type="submit" value="DELETE" class="button">
 		</form>
         </div>

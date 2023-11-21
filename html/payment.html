@@ -5,26 +5,34 @@
     <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-    <header>
-        <h1>Payment Details</h1>
-    </header>
+    <h1>Payment Details</h1><br><br>
+    <div class="form-container">
+        <form method="post" action="../php/payment.php" style="font-family: verdana;" autocomplete="off">
+
+            <label for="paymentDate" class="label">Payment Date:</label>
+            <input type="date" id="paymentDate" name="paymentDate" size="50" class="payd" required><br><br>
+
+			<label for="paymentType" class="label">Payment Type:</label>
+            <select id="paymentType" name="paymentType" class="payt" required>
+                <option value=""></option>
+				<option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash">Cash</option>
+            </select><br><br>
+
+            <label for="amount" class="label">Amount:</label>
+            <input type="number" id="amount" name="amount" size="50" class="amt" placeholder="Enter Amount" min="1" required><br><br>
 
 
-        <div class="form-container">
-            <form method="post" action="../html/payadd.html" onsubmit="redirectToHome()" style ="font-family:verdana;" autocomplete="off" height="50%"><br>
-                <div style="display: flex; justify-content: center; align-items: center;">
-                <a href=""><button type="submit" name="button" value="ADDNEWDETAILS" class="button">ADD NEW DETAILS</button> <br><br></a>
-	            <a href=""><button type="button" value="" class="button" onclick=""></button> <br><br></a>
-                </div>
-    
-                <br>
-                
-                <a href="../html/home.html">HOME</a>
-            </form>
-            
-
-
-        </div>
+            <!-- <a href="../php/payment.php"> -->
+				<button type="submit" value="Pay" class="button">PAY</button>
+				<button type="reset" value="Cancel" class="button">CANCEL</button>	
+			<!-- </a> -->
+        </form>
+        <br>
+	    <a href="../html/home.html"><button class="button">HOME</button></a>
+    </div>
     <footer>
         <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
         <p>All Rights Reserved !</p>
