@@ -1,7 +1,3 @@
-<?php
-    
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +11,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #ccc; /* Change this to the shade of grey you prefer */
+            background-color: #202020;
             margin: 0;
             padding: 0;
         }
@@ -40,11 +36,13 @@
         }
         </style>
 
-
-
-
 </head>
 <body>
+    <br><br>
+    <div class="button-row" align="center">
+        <a href="../html/home.html" class="links">HOME</a>
+        <a href="../html/customer.html" class="links">CUSTOMER SERVICE</a>
+    </div>
     <div class="container">
         <h2>User Records</h2>
 

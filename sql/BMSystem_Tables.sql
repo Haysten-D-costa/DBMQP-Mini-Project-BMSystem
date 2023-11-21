@@ -24,16 +24,16 @@ CREATE TABLE Books
 
 INSERT INTO LoginDetails (userName, email, phone, password)
 VALUES
-("John Smith", "js@gmail.com", "9999988888", "12345"),
-("Jane Doe", "jd@gmail.com", "9999988888", "12345"),
-("David Johnson", "dj@gmail.com", "9999988888", "12345"),
-("Emily Williams", "ew@gmail.com", "9999988888", "12345"),
-("Michael Brown", "mb@gmail.com", "9999988888", "12345"),
-("Emma Davis", "ed@gmail.com", "9999988888", "12345"),
-("Christopher White", "cw@gmail.com", "9999988888", "12345"),
-("Olivia Wilson", "ow@gmail.com", "9999988888", "12345"),
+("John Smith", "js@gmail.com", "9999988880", "12345"),
+("Jane Doe", "jd@gmail.com", "9999988881", "12345"),
+("David Johnson", "dj@gmail.com", "9999988882", "12345"),
+("Emily Williams", "ew@gmail.com", "9999988883", "12345"),
+("Michael Brown", "mb@gmail.com", "9999988884", "12345"),
+("Emma Davis", "ed@gmail.com", "9999988885", "12345"),
+("Christopher White", "cw@gmail.com", "9999988886", "12345"),
+("Olivia Wilson", "ow@gmail.com", "9999988887", "12345"),
 ("Liam Martinez", "lm@gmail.com", "9999988888", "12345"),
-("Sophia Anderson", "sa@gmail.com", "9999988888", "12345");
+("Sophia Anderson", "sa@gmail.com", "9999988889", "12345");
 
 
 INSERT INTO Books (ISBN, Title, Author, Genre, Price, Quantity, Publisher, PublicationDate)

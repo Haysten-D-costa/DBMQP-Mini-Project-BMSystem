@@ -1,3 +1,28 @@
+<html>
+<head>
+    <style>
+        body {
+            color: whitesmoke;
+	        background-color: #212121;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #c00;
+            margin-left: 10px;
+            padding: 8px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <a href="../html/customer.html" class="links">Goto Customer Services</a>
+    <a href="../html/home.html" class="links">Goto Home</a>
+    <br><br>
+</body>
+<html>
 <?php
 	$name = $_POST['name'] ;
     $email = $_POST['email'];
@@ -24,6 +49,4 @@
         exit();
     }
     mysqli_close($conn);
-
-
 ?>

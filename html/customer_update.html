@@ -57,16 +57,13 @@
     </header>
 
     <div class="form-container">
-        <form method="post" action="../php/customer_update.php" onsubmit="redirectToHome()" style="font-family: verdana;" autocomplete="off" height="50%">
+        <form method="post" action="../php/customer_update.php" style="font-family: verdana;" autocomplete="off" height="50%">
+            <label for="userid" class="label"> USER ID:</label>
+            <input class="input-box" style="width: 250px; height: 35px" type="text" id="userid"  name="userid" required>
 
-            
-                <label for="userid" class="label"> USER ID:</label>
-                <input class="input-box" style="width: 250px; height: 35px" type="text" id="userid"  name="userid" required>
+            <label for="name" class="label"> NAME:</label>
+            <input class="input-box" style="width: 250px; height: 35px" type="text" id="name"  name="name" required>
 
-                <label for="name" class="label"> NAME:</label>
-                <input class="input-box" style="width: 250px; height: 35px" type="text" id="name"  name="name" required>
-            
-			
             <label for="email" class="label">EMAIL:</label>
             <input class="input-boxes" style="width: 250px; height: 35px" type="email" id="email"  name="email" required>
 
@@ -77,15 +74,14 @@
             <input class="input-boxes" style="width: 250px; height: 35px" type="password" id="password" name="password" maxlength="10" required>
 		
             <div class="button-container">
-                <input type="submit" value="UPDATE" class="button"><br><br>
-                
+                <input type="submit" value="UPDATE" class="button"><br><br><br><br>
             </div>
         </form>
 
     </div>
 	<div class="button-row" align="center">
-        <a href="../html/home.html" class="links"><button type="button" value="HOME"  >HOME</button></a>
-        <a href="../html/customer.html" class="links"><button type="button" value="CUSTOMER SERVICE"  >CUSTOMER SERVICE</button></a>
+        <a href="../html/home.html" class="links">HOME</a>
+        <a href="../html/customer.html" class="links">CUSTOMER SERVICE</a>
     </div>
     <footer>
         <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>

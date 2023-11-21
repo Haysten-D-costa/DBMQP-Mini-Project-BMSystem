@@ -24,12 +24,12 @@
         exit();
     }
     $query = "
-        UPDATE FROM LoginDetails 
+        UPDATE LoginDetails 
         SET  
-            userName= '$name' and
-		    email= '$email' and
-			password= '$password' and
-            phone= '$phone' 
+            userName= '$name',
+		    email= '$email',
+			password= '$password',
+            phone= '$phone'
         WHERE userID='$userid';
         ";
     $r = mysqli_query($conn, $query);
@@ -37,6 +37,5 @@
     else {
         echo "Update Failed !";
         exit();
-    }
-       
+    }     
 ?>
