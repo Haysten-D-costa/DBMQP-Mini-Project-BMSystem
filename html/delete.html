@@ -3,32 +3,25 @@
 		<title>Delete Books Form</title>
 		<link rel="stylesheet" href="../css/modify.css">
 		<link rel="stylesheet" href="../css/header-footer.css">
-        <style>
-			a {
-                text-decoration: none;
-                color: white;
-                background-color: #c00;
-                padding: 13px;
-                font-size: 20px;
-                font-weight: bolder;
-            }
-		</style>
 	</head>
 	<body>
 	<header>
 		<h1 align ="center">BOOK STORE MANAGEMENT SYSTEM</h1><br><br>
 	</header>
-	<p style="padding-left: 80px;">Atleast one field including Book ISBN is mandatory !  (All Fields REQUIRED DURING INSERTION)</p>
 	<div class="form-container">
-		<form align="left" method="post" action="../php/modify.php" style ="font-family:verdana;" autocomplete="off" height="50%">
-			<label for="isbn" class="label"> Enter ISBN of book to be deleted<span class="imp-text"> * </span> : </label><br>
-			<input class="input-boxes" size ="50" type="text" id="isbn" placeholder="Eg : 9999988888777" name="isbn"><br><br>
-			<br>
-            <input type="submit" name="button" value="DELETE" class="button">
-			<a href="../php/books.php" class="links">Goto Books</a>
-			<a href="../html/home.html" class="links">Goto Home</a>
-		</form>
-		<img src="../images/reading.jpg" id="login-image" width="670px" height="700px" style="object-fit: contain;">
+		<div>
+			<p style="font-size: larger;">This field is must for Deletion operation !! Enter valid ISBN : </p>
+			<br><br>
+			<form align="left" method="post" action="../php/delete.php" style ="font-family:verdana;" autocomplete="off" height="50%">
+				<label for="isbn" class="label"> Enter ISBN of book to be deleted<span class="imp-text"> * </span> : </label><br>
+				<input class="input-boxes" size ="50" type="text" id="isbn" placeholder="Eg : 9999988888777" name="isbn"><br><br>
+				<input type="submit" name="button" value="DELETE" class="button">
+				<a href="../php/books.php" class="links">Goto Books</a>
+				<a href="../html/home.html" class="links">Goto Home</a>
+			</form>
+
+		</div>
+		<img src="../images/reading.jpg" id="login-image" width="650px" height="500px" >
 	</div>
 	<footer>
         <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>

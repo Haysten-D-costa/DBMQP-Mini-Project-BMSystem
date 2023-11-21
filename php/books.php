@@ -28,6 +28,11 @@
                 font-size: 20px;
                 font-weight: bolder;
             }
+            footer {
+                position: fixed;
+                bottom:0;
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -64,16 +69,36 @@
             <br><br>
             <table class="table-content">
                 <thead>
-                    <tr>
-                        <th>Book ISBN</th>
-                        <th>Book Title</th>
-                        <th>Book Author</th>
-                        <th>Book Genre</th>
-                        <th>Book Price</th>
-                        <th>Book Quantity</th>
-                        <th>Book Publisher</th>
-                        <th>Book Publication Date</th>
-                    </tr>
+                    <?php
+                        $conn = mysqli_connect("localhost", "root", "", "BMSystem");
+                        if($conn) { }
+                        else {
+                            echo "Failed connection !";
+                            exit();
+                        }
+                        if(isset($_POST['views'])) {
+                            $view_by = $_POST['views'];
+                            if($view_by == "view1") {
+                                echo "<tr>
+                                    <th>Book ISBN</th>
+                                    <th>Book Title</th>
+                                    <th>Book Author</th>
+                                    <th>Book Genre</th>
+                                    <th>Book Price</th>
+                                    <th>Book Quantity</th>
+                                    <th>Book Publisher</th>
+                                    <th>Book Publication Date</th>
+                                    </tr>";
+                            } else {
+                                echo "<tr>
+                                    <th>Book ISBN</th>
+                                    <th>Book Title</th>
+                                    <th>Book Author</th>
+                                    <th>Book Genre</th>
+                                    </tr>";
+                            }
+                        }  
+                    ?>
                 </thead>
                 <tbody>
                     <?php
@@ -94,17 +119,28 @@
                             $r = mysqli_query($conn, $query);
 
                             if($r) {
-                                while($info = mysqli_fetch_array($r)) {
-                                    echo "<tr>
-                                        <td>" . $info["ISBN"] ."</td>
-                                        <td>" . $info["Title"] . "</td>
-                                        <td>" . $info["Author"] . "</td>
-                                        <td>" . $info["Genre"] . "</td>
-                                        <td>" . $info["Price"] . "</td>
-                                        <td>" . $info["Quantity"] . "</td>
-                                        <td>" . $info["Publisher"] . "</td>
-                                        <td>" . $info["PublicationDate"] . "</td>
-                                        </tr>";
+                                if($view_by == "view1") {
+                                    while($info = mysqli_fetch_array($r)) {
+                                        echo "<tr>
+                                            <td>" . $info["ISBN"] ."</td>
+                                            <td>" . $info["Title"] . "</td>
+                                            <td>" . $info["Author"] . "</td>
+                                            <td>" . $info["Genre"] . "</td>
+                                            <td>" . $info["Price"] . "</td>
+                                            <td>" . $info["Quantity"] . "</td>
+                                            <td>" . $info["Publisher"] . "</td>
+                                            <td>" . $info["PublicationDate"] . "</td>
+                                            </tr>";
+                                    }
+                                } else {
+                                    while($info = mysqli_fetch_array($r)) {
+                                        echo "<tr>
+                                            <td>" . $info["ISBN"] ."</td>
+                                            <td>" . $info["Title"] . "</td>
+                                            <td>" . $info["Author"] . "</td>
+                                            <td>" . $info["Genre"] . "</td>
+                                            </tr>";
+                                        }
                                 }
                             }
                             else {
@@ -117,14 +153,15 @@
             </table>
         </div>
         <div align="center" class="operation-container">
-            <a href="../html/home.html" target="_self" style="width:300px">HOME</a><br>
+            <a href="../html/home.html" target="_self" style="width:300px">HOME</a>
             <a href="../html/insert.html">INSERT</a>
             <a href="../html/update.html">UPDATE</a>
             <a href="../html/delete.html">DELETE</a>
+            <br><br><br><br><br><br><br><br>
         </div>
         <footer>
             <h3>&copy; 2023 Book-Store-Management-System LLC.</h3>
-            <p>All Rights Reserved !</p><br>
+            <p>All Rights Reserved !</p>
             <p>Developers : Sehal | Riya | Siya | Haysten</p>
         </footer>
     </body>
