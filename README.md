@@ -1,9 +1,9 @@
 # BOOK STORE MANAGEMENT SYSTEM (DBMQ MINI-PROJECT)....
 ## Contributors : 
-    -> Haysten D'costa (worked on home, books and related pages....),
-    -> Sehal Chodankar (worked on customer and related pages....),
-    -> Siya Redkar (worked on login and home page....),
-    -> Riya Tar (worked on payments and related pages....)
+    -> `Haysten D'costa` (worked on home, books and related pages....),
+    -> `Sehal Chodankar` (worked on customer and related pages....),
+    -> `Siya Redkar` (worked on login and home page....),
+    -> `Riya Tar` (worked on payments and related pages....)
 
 <p>
     A bookstore management system is a software application designed to help bookstore owners and managers efficiently manage their bookstore's operations. 
