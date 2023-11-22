@@ -113,6 +113,33 @@
                         if(isset($_POST['search-button'])) {
                             $search_key = $_POST['search-bar'];
                             $search_by = $_POST['filter'];
+                            
+                            if($search_by != "All") { // count of only searched entries....
+                                $query = "
+                                    SELECT count(isbn) FROM Books
+                                    WHERE $search_by = '$search_key';
+                                ";
+                                $r = mysqli_query($conn, $query);
+    
+                                if($r) {
+                                    while($info = mysqli_fetch_array($r)) {
+                                        echo "<br>Total books available of searched type : " . $info['count(isbn)'];
+                                        echo "<br><br>";
+                                    }
+                                }
+                            } else { // count of all entries....
+                                $query = "
+                                    SELECT count(*) FROM Books;
+                                ";
+                                $r = mysqli_query($conn, $query);
+    
+                                if($r) {
+                                    while($info = mysqli_fetch_array($r)) {
+                                        echo "<br>Total books available of searched type : " . $info['count(*)'];
+                                        echo "<br><br>";
+                                    }
+                                }
+                            } 
 
                             $query = "SELECT * FROM Books WHERE $search_by = '$search_key';";
                             if($search_by == "All") { 
@@ -151,7 +178,7 @@
                                 echo "Display Operation Failed !"; 
                                 exit(); 
                             }
-                        }          
+                        } 
                         mysqli_close($conn);
                     ?>
                 </tbody>

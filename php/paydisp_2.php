@@ -31,17 +31,23 @@
         echo "Failed connection !";
         exit();
     }
+    $query = "SELECT count(*) FROM Payments";
+    $r = mysqli_query($conn, $query);
+    if($r) {
+        while($info = mysqli_fetch_array($r)) {
+            echo "Total number of Payments Done : " . $info['count(*)'];                      
+        }
+    }
+
     $query = "
-        SELECT userID, userName FROM LoginDetails
-        UNION 
         SELECT PaymentID, PaymentName FROM Payments;
     ";
     $r = mysqli_query($conn, $query);
 
     if($r) {
         while($info = mysqli_fetch_array($r)) {
-            echo "<br><br>Customer ID : " . $info['userID'];
-            echo "<br>Customer Name   : " . $info['userName'];               
+            echo "<br><br>Customer ID : " . $info['PaymentID'];
+            echo "<br>Customer Name   : " . $info['PaymentName'];               
         }
     }
     mysqli_close($conn);
