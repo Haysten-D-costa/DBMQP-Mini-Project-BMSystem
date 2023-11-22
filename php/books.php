@@ -115,7 +115,10 @@
                             $search_by = $_POST['filter'];
 
                             $query = "SELECT * FROM Books WHERE $search_by = '$search_key';";
-                            if($search_by == "All") { $query = "SELECT * FROM Books;"; }
+                            if($search_by == "All") { 
+                                if($view_by == "view1") { $query = "SELECT * FROM view1;"; }
+                                else { $query = "SELECT * FROM view2;"; } 
+                            }
                             $r = mysqli_query($conn, $query);
 
                             if($r) {
@@ -132,7 +135,8 @@
                                             <td>" . $info["PublicationDate"] . "</td>
                                             </tr>";
                                     }
-                                } else {
+                                }
+                                else {
                                     while($info = mysqli_fetch_array($r)) {
                                         echo "<tr>
                                             <td>" . $info["ISBN"] ."</td>
@@ -140,14 +144,15 @@
                                             <td>" . $info["Author"] . "</td>
                                             <td>" . $info["Genre"] . "</td>
                                             </tr>";
-                                        }
+                                    }
                                 }
-                            }
+                            } 
                             else {
                                 echo "Display Operation Failed !"; 
                                 exit(); 
                             }
                         }          
+                        mysqli_close($conn);
                     ?>
                 </tbody>
             </table>

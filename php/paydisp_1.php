@@ -18,7 +18,7 @@
 </head>
 <body>
     <br><br>
-    <a href="../php/books.php" class="links">Goto Books</a>
+    <a href="../html/payment.html" class="links">Goto Payment</a>
     <a href="../html/home.html" class="links">Goto Home</a>
     <br><br>
 </body>
@@ -53,4 +53,5 @@
             echo "<br>Payment Type    : " . $info['paymentType'];                
         }
     }
+    mysqli_close($conn);
 ?>

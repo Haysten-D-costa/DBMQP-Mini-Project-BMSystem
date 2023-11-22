@@ -43,11 +43,11 @@
                 echo "Deletion Failed !";
             }
 
-            mysqli_close($conn);
         } else {
             echo "Connection Failed !";
         }
     } else {
         echo "Invalid request. Please provide a user ID.";
     }
+    mysqli_close($conn);
 ?>

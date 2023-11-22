@@ -7,6 +7,12 @@
         }
     </style>
 </head>
+<body>
+    <br><br>
+    <a href="../html/customer.html" class="links">Goto Customer</a>
+    <a href="../html/home.html" class="links">Goto Home</a>
+    <br><br>
+</body>
 <html>
 
 <?php
@@ -37,5 +43,6 @@
     else {
         echo "Update Failed !";
         exit();
-    }     
+    }
+    mysqli_close($conn);
 ?>

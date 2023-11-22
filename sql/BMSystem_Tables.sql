@@ -82,13 +82,13 @@ SELECT ISBN, Title, Author, Genre
 FROM Books;
 
 -- joins implemented...
-SELECT l.userID, l.paymentName, b.ISBN, b.title,
-b.author, b.genre, b.price, p.paymentType, p.amount
+SELECT l.userID, p.paymentName, b.ISBN, b.title,
+b.author, b.genre, b.price, p.paymentType
 FROM LoginDetails as l, Books as b, Payments as p
 WHERE
     l.userName = p.PaymentName AND
     b.title = p.bookname;
 
 SELECT userID, userName FROM LoginDetails
-INTERSECT 
+UNION
 SELECT PaymentID, PaymentName FROM Payments;

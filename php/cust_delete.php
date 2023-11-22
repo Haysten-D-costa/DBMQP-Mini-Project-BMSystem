@@ -49,10 +49,10 @@
                     echo "<br>Error in search operation: " . mysqli_error($conn);
                 }
                 echo "<br><br><br><br>";
-                mysqli_close($conn);
             } else {
                 echo "<br>Connection failed !";
             }
+            mysqli_close($conn);
             ?>
         </div>
     </div>    

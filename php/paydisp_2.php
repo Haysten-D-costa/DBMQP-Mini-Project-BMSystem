@@ -32,9 +32,9 @@
         exit();
     }
     $query = "
-    SELECT userID, userName FROM LoginDetails
-    INTERSECT 
-    SELECT PaymentID, PaymentName FROM Payments;
+        SELECT userID, userName FROM LoginDetails
+        UNION 
+        SELECT PaymentID, PaymentName FROM Payments;
     ";
     $r = mysqli_query($conn, $query);
 
@@ -44,4 +44,5 @@
             echo "<br>Customer Name   : " . $info['userName'];               
         }
     }
+    mysqli_close($conn);
 ?>

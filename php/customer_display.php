@@ -73,7 +73,6 @@
                 echo "<br>Error in search operation: " . mysqli_error($conn);
                 exit();
             }
-        
             mysqli_close($conn);
         ?>
 
