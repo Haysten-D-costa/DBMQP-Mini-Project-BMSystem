@@ -5,6 +5,16 @@
             color: whitesmoke;
 	        background-color: #212121;
         }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #c00;
+            margin-left: 10px;
+            padding: 8px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
     </style>
 </head>
 <body>
@@ -13,6 +23,7 @@
     <a href="../html/home.html" class="links">Goto Home</a>
     <br><br>
 </body>
+
 <html>
 
 <?php
