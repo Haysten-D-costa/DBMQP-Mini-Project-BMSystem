@@ -69,24 +69,53 @@
 
 ### Demo : 
 
-![BMSystemDemo](/images/Pages/HomePage.png)
+![BMSystemDemo](/images/Pages/HomePage.jpeg)
 <hr>
 
-![BMSystemDemo](/images/Pages/LoginPage.png)
+![BMSystemDemo](/images/Pages/LoginPage.jpeg)
 <hr>
 
-![BMSystemDemo](/images/Pages/BooksPage.png)
+![BMSystemDemo](/images/Pages/Books01.jpeg)
 <hr>
 
-![BMSystemDemo](/images/Pages/Modify.jpeg)
+![BMSystemDemo](/images/Pages/BooksPage02.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/BooksInsertPage.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/BooksUpdatePage.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/BooksDeletePage.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/CustomerPage.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/CustomerAddPage.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/CustomerDeletePage.jpeg)
 <br>
 
-![BMSystemDemo](/images/Pages/Books2.jpeg)
+![BMSystemDemo](/images/Pages/CustomerDisplayPage.jpeg)
 <hr>
 
-![BMSystemDemo](/images/Pages/CustomerPage.png)
+![BMSystemDemo](/images/Pages/CustomerUpdatePage.jpeg)
 <hr>
 
-![BMSystemDemo](/images/Pages/PaymentsPage.png)
+![BMSystemDemo](/images/Pages/PaymentsPage.jpeg)
 <hr>
 
+![BMSystemDemo](/images/Pages/PaymentsAddPage.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/PaymentsDisplayPage01.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/PaymentsDisplayPage01.jpeg)
+<hr>
+
+![BMSystemDemo](/images/Pages/HomePage.jpeg)
+<hr>
