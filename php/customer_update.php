@@ -8,12 +8,11 @@
     <a href="../html/home.html" class="links">Goto Home</a>
     <br><br>
 </body>
-
 <html>
 
 <?php
 
-    $userid=$_POST['userid'];
+    $userid = $_POST['userid'];
     $name = $_POST['name'] ;
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -26,14 +25,14 @@
         exit();
     }
     $query = "
-        UPDATE LoginDetails 
+        UPDATE User 
         SET  
-            userName= '$name',
-		    email= '$email',
-			password= '$password',
-            phone= '$phone'
-        WHERE userID='$userid';
-        ";
+            userName = '$name',
+		    email = '$email',
+			password = '$password',
+            phone = '$phone'
+        WHERE userID = '$userid';
+    ";
     $r = mysqli_query($conn, $query);
     if($r) { echo "Update Successful !"; }
     else {

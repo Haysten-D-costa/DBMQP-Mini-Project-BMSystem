@@ -18,11 +18,10 @@
         exit();
     }
     $query = "
-        SELECT l.userID, p.paymentName, b.ISBN, b.title,
-        b.author, b.genre, b.price, p.paymentType
-        FROM LoginDetails as l, Books as b, Payments as p
+        SELECT u.userID, p.paymentName, b.ISBN, b.title, b.author, b.genre, b.price, p.paymentType
+        FROM User as u, Books as b, Payments as p
         WHERE
-            l.userName = p.PaymentName AND
+            u.userName = p.PaymentName AND
             b.title = p.bookname;
     ";
     $r = mysqli_query($conn, $query);

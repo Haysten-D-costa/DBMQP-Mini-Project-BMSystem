@@ -55,7 +55,7 @@
                 exit();
             }
         
-            $query = "SELECT * FROM LoginDetails";
+            $query = "SELECT * FROM User";
             $r1 = mysqli_query($conn, $query);
         
             if ($r1) {

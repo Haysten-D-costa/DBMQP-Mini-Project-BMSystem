@@ -1,6 +1,6 @@
 CREATE DATABASE BMSystem;
 
-CREATE TABLE LoginDetails 
+CREATE TABLE User 
 (
     userID INT AUTO_INCREMENT PRIMARY KEY,
     userName VARCHAR(20),
@@ -22,7 +22,7 @@ CREATE TABLE Books
 );
 
 
-INSERT INTO LoginDetails (userName, email, phone, password)
+INSERT INTO User (userName, email, phone, password)
 VALUES
 ("John Smith", "js@gmail.com", "9999988880", "12345"),
 ("Jane Doe", "jd@gmail.com", "9999988881", "12345"),
@@ -82,13 +82,10 @@ SELECT ISBN, Title, Author, Genre
 FROM Books;
 
 -- joins implemented...
-SELECT l.userID, p.paymentName, b.ISBN, b.title,
-b.author, b.genre, b.price, p.paymentType
-FROM LoginDetails as l, Books as b, Payments as p
+SELECT u.userID, p.paymentName, b.ISBN, b.title, b.author, b.genre, b.price, p.paymentType
+FROM User as u, Books as b, Payments as p
 WHERE
-    l.userName = p.PaymentName AND
+    u.userName = p.PaymentName AND
     b.title = p.bookname;
 
-SELECT userID, userName FROM LoginDetails
-UNION
 SELECT PaymentID, PaymentName FROM Payments;

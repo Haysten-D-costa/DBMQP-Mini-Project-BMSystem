@@ -23,7 +23,7 @@
         exit();
     }
     $query = "
-        INSERT INTO LoginDetails (userName, email, password, phone)
+        INSERT INTO User (userName, email, password, phone)
         VALUES
         ('$name', '$email', '$password', '$phone');
     ";
