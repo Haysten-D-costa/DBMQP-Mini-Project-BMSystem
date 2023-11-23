@@ -34,7 +34,7 @@
             // Use mysqli_real_escape_string to prevent SQL injection
             $userId = mysqli_real_escape_string($conn, $userId);
 
-            $query = "DELETE FROM LoginDetails WHERE userID = '$userId'";
+            $query = "DELETE FROM User WHERE userID = '$userId'";
             $r = mysqli_query($conn, $query);
 
             if($r) {

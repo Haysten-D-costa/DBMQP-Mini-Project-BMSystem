@@ -30,7 +30,7 @@
             $conn = mysqli_connect("localhost", "root", "", "BMSystem");
 
             if ($conn) {
-                $query = "SELECT * FROM LoginDetails";
+                $query = "SELECT * FROM User";
                 $result = mysqli_query($conn, $query);
 
                 if ($result) {

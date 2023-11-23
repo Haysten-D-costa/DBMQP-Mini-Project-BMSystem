@@ -30,13 +30,13 @@
     $phone = $_POST['phone'];
 
     $conn = mysqli_connect("localhost", "root", "", "BMSystem");
-    if($conn) {  }
+    if($conn) { }
     else {
         alert("<br>Connection failed !");
         exit();
     }
     $query = "
-        INSERT INTO LoginDetails (userName, email, password, phone)
+        INSERT INTO User (userName, email, password, phone)
         VALUES
         ('$name', '$email', '$password','$phone');
     ";
