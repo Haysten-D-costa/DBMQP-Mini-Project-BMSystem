@@ -1,4 +1,5 @@
 CREATE DATABASE BMSystem;
+USE BMSystem;
 
 CREATE TABLE User 
 (
