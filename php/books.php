@@ -19,20 +19,6 @@
                 padding: 12px 15px;
                 border: 1px solid black;
             }
-            a {
-                text-decoration: none;
-                color: white;
-                background-color: #c00;
-                margin-left: 10px;
-                padding: 8px;
-                font-size: 20px;
-                font-weight: bolder;
-            }
-            footer {
-                position: fixed;
-                bottom:0;
-                width: 100%;
-            }
         </style>
     </head>
     <body>
@@ -185,10 +171,10 @@
             </table>
         </div>
         <div align="center" class="operation-container">
-            <a href="../html/home.html" target="_self" style="width:300px">HOME</a>
-            <a href="../html/insert.html">INSERT</a>
-            <a href="../html/update.html">UPDATE</a>
-            <a href="../html/delete.html">DELETE</a>
+            <a class="links" href="../html/home.html" target="_self" style="width:300px">HOME</a>
+            <a class="links" href="../html/insert.html">INSERT</a>
+            <a class="links" href="../html/update.html">UPDATE</a>
+            <a class="links" href="../html/delete.html">DELETE</a>
             <br><br><br><br><br><br><br><br>
         </div>
         <footer>

@@ -1,3 +1,7 @@
+body {
+    background-color: #212121;
+    color: whitesmoke;
+}
 header, footer {
     text-align: center;
 }
@@ -18,4 +22,5 @@ footer {
     padding: 13px;
     font-size: 20px;
     font-weight: bolder;
+    margin-right: 10px;
 }

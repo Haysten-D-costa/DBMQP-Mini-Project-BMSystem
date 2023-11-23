@@ -19,13 +19,15 @@
         .container {
             width: 80%;
             margin: 20px auto;
-            background-color: #fff;
+            color:white;
+            background-color: #363636;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid red;
         }
 
         h2 {
-            color: #333;
+            color: white;
         }
 
         .record {

@@ -1,30 +1,31 @@
 <html>
 <head>
-    <style>
-        body {
-            color: whitesmoke;
-	        background-color: #212121;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/header-footer.css">
 </head>
+<body>
+    <br><br>
+    <a href="../html/home.html" class="links">Goto Home</a>
+    <br><br>
+</body>
 <html>
 
 <?php
     // reading data from login page....
     $name = $_POST['fname'] ." ". $_POST['lname'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $password = $_POST['password'];
 
     $conn = mysqli_connect("localhost", "root", "", "BMSystem");
-    if($conn) { echo "<br>Connection successful !"; }
+    if($conn) { }
     else {
         alert("<br>Connection failed !");
         exit();
     }
     $query = "
-        INSERT INTO LoginDetails (userName, email, password)
+        INSERT INTO LoginDetails (userName, email, password, phone)
         VALUES
-        ('$name', '$email', '$password');
+        ('$name', '$email', '$password', '$phone');
     ";
     $r = mysqli_query($conn, $query);
     if($r) { 
